@@ -48,12 +48,13 @@ public class BallMesh : MonoBehaviour
             }
         }
 
-        Vector3[] normals = new Vector3[vertices.Length];
-        Normalize(vertices, normals);
+        //Vector3[] normals = new Vector3[vertices.Length];
+        //Normalize(vertices, normals);
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-        mesh.normals = normals;
+        //mesh.normals = normals;
+        mesh.RecalculateNormals();
 
     }
 
